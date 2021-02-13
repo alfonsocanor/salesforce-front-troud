@@ -1,0 +1,16 @@
+<template>
+    <lightning-map
+      map-markers={mapMarkers}
+      markers-title="Lunch Gems"
+      onmarkerselect={handleMarkerSelect}
+      selected-marker-value={selectedMarkerValue}>
+    </lightning-map>
+
+    <template if:true={openOrder}>
+      <c-lwc-troud-account-modal
+        account-id={accountId2RetriveOrders}
+        route-sheet-id={recordId}
+        oncloseordermodal={closeOrderModal}>
+      </c-lwc-troud-account-modal>
+    </template>
+</template>
